@@ -1,0 +1,54 @@
+html{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+@font-face {
+    font-family: 'norsebold';
+    src: url('../assets/norse-bold_1-webfont.woff2') format('woff2'),
+         url('../assets/norse-bold_1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container{
+    display: flex;
+    border: 1px solid black;
+    flex-basis: 70%;
+}
+
+img{
+    height: 50rem;
+    max-width: 30rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.intro{
+    background-color: rgb(212, 212, 212);
+    flex-grow: 1;
+}
+
+.input{
+    background-color: black;
+    flex-grow: 2;
+}
+
+.lower{
+    background-color: aliceblue;
+    flex-grow: 1;
+}
