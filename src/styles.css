@@ -1,54 +1,121 @@
-html{
-    box-sizing: border-box;
-    margin: 0px;
-}
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    height: 100vh;
-    width: 100vw;
-}
-
 @font-face {
     font-family: 'norsebold';
     src: url('../assets/norse-bold_1-webfont.woff2') format('woff2'),
          url('../assets/norse-bold_1-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-.container{
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    --main-bg-color: rgb(190, 202, 214);
+}
+
+.container {
     display: flex;
-    border: 1px solid black;
-    flex-basis: 70%;
+    height: 100%;
+    width: 100%;
 }
 
-img{
-    height: 50rem;
-    max-width: 30rem;
-}
-
-.form{
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
+img {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .intro{
-    background-color: rgb(212, 212, 212);
     flex-grow: 1;
+    flex-basis: 10%;
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textportion {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    padding: 10px 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text1{
+    width: 800px;
+}
+
+.mainform {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .input{
-    background-color: black;
+    padding: 10px;
     flex-grow: 2;
+    flex-basis: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    max-height: 50vh;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+form{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-basis: 50%;
+    max-height: 30vh;
+}
+
+.field{
+    font-size: 1.15em;
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 1.15em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputbox{
+    outline: none;
+    border: 1px solid black;
+    max-width: 15vw;
+    border-radius: 5px;
+    border-color: black;
+    border-width: .5px;
+}
+
+
+input{
+    font-size: 1.05em;
+}
+
+#first_name:focus, #last_name:focus, #email:focus, #phone_number:focus, #password:focus, #password_confirmation:focus{
+    border: rgb(128, 159, 199) 1px solid;
+    box-shadow: 1px 1px 1px 1px rgb(128, 159, 199);
+}
+
+#password_confirmation:invalid, #password:invalid{
+    border: red 1px solid;
 }
 
 .lower{
-    background-color: aliceblue;
     flex-grow: 1;
+    background-color: var(--main-bg-color);
+
 }
